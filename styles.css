@@ -128,10 +128,16 @@ img{
 .comment-pic-container{
     position: relative;
     flex-grow: 1;
-    text-align: end;
+    text-align: end;    
+    border-radius: 5px;
 }
 .comment-pic{
     margin: 0;
+    border-radius: 5px;
+}
+.comment-pic:hover{
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
 }
 .notification-desc-container[data-type="message"]{
     flex-direction: column;
