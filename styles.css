@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.613);
+}
+
+main{
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.176);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 800px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+/* --------------header---------------- */
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 25px;
+    display: inline-block;
+    font-weight: 800;
+    color: black;
+}
+.notification-num{
+    display: inline-block;
+    margin-left: 20px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(219, 85%, 26%);
+    font-weight: 800;
+}
+#mark-read:hover{
+    cursor: pointer;
+    color: hsl(219, 85%, 26%);
+}
+/*----- notifications ------*/
+.notifications{
+    display: flex;
+    flex-direction: column;    
+}
+
+.notification{
+    padding: 20px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    display:flex;
+    box-sizing: border-box;
+}
+.notification[data-status="unread"]{
+    background-color: hsl(210, 60%, 98%);
+}
+.not-period{
+    height:7px;
+    width: 7px;
+    margin: 2px 0px 2px 5px;
+    background-color: hsl(1, 90%, 64%);
+    border-radius: 50%;
+    display: inline-block;
+}
+.profile-pic{
+    height: 47px;
+}
+img{
+    height: 47px;
+    margin-right: 20px;
+}
+
+.notification-desc-container{
+    display: flex;
+    line-height: 1.5;
+    position: relative;
+    flex-grow: 1;
+}
+/* .notification-desc-container>div{
+    display: flex;
+    justify-content: space-between;
+} */
+
+
+
+.name{
+    font-weight: 800;
+    margin-right: 5px;
+    color: black;
+}
+.group, .post{
+    font-weight: 800;
+    margin-left: 5px;
+}
+
+.group{
+    color:hsl(219, 85%, 26%);
+}
+
+.time{
+    display: block;
+    color: rgba(0, 0, 0, 0.583);
+    font-weight: 500;
+    
+}
+.private-message{
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.127);
+    border-radius: 5px;
+}
+.private-message:hover{
+    border-color: hsl(211, 68%, 94%);
+    background-color:hsl(211, 68%, 94%);
+}
+
+
+.comment-pic-container{
+    position: relative;
+    flex-grow: 1;
+    text-align: end;
+}
+.comment-pic{
+    margin: 0;
+}
+.notification-desc-container[data-type="message"]{
+    flex-direction: column;
+}
+
+.group:hover, .post:hover, .name:hover{
+    color:hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+
+
+@media (max-width:800px){
+    body{
+        height: auto;
+    }
+    main{
+        border-radius: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
